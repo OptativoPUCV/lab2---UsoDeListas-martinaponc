@@ -125,9 +125,9 @@ int parentesisBalanceados(char *cadena)
       {
         elemento = (char*) top(pila);
 
-        if(*elemento == '{' && cadena[i] == '}' || 
-          *elemento == '(' && cadena[i] == ')' ||
-          *elemento == '[' && cadena[i] == ']')
+        if((*elemento == '{' && cadena[i] == '}') || 
+          (*elemento == '(' && cadena[i] == ')') ||
+          (*elemento == '[' && cadena[i] == ']'))
         {
           pop(pila);
         }
@@ -144,4 +144,5 @@ int parentesisBalanceados(char *cadena)
   }
   return 1;
 }
+
 
