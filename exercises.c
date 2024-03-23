@@ -102,8 +102,7 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2)
 {
-  Stack* funcion(Stack*  P1)
-  {
+    {
       Stack * P2 = crea_Pila();
       Stack * pila_aux = crea_Pila();
       
