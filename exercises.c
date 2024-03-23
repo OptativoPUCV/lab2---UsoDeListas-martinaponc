@@ -122,7 +122,6 @@ void copia_pila(Stack* P1, Stack* P2)
           
     }
     free (pila_aux);
-    return  P2;
   } 
   
 }
