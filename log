@@ -1326,3 +1326,135 @@ exercises.c:127:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 10cd58b
+Sat 23 Mar 2024 09:51:25 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:105:5: error: unknown type name ‘Pila’
+  105 |     Pila * P2 = crea_pila();
+      |     ^~~~
+exercises.c:105:12: error: ‘P2’ redeclared as different kind of symbol
+  105 |     Pila * P2 = crea_pila();
+      |            ^~
+exercises.c:103:35: note: previous definition of ‘P2’ with type ‘Stack *’ {aka ‘List *’}
+  103 | void copia_pila(Stack* P1, Stack* P2)
+      |                            ~~~~~~~^~
+exercises.c:105:17: error: implicit declaration of function ‘crea_pila’; did you mean ‘copia_pila’? [-Werror=implicit-function-declaration]
+  105 |     Pila * P2 = crea_pila();
+      |                 ^~~~~~~~~
+      |                 copia_pila
+exercises.c:105:17: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:106:5: error: unknown type name ‘Pila’
+  106 |     Pila * pila_aux = crea_pila();
+      |     ^~~~
+exercises.c:106:23: error: initialization of ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  106 |     Pila * pila_aux = crea_pila();
+      |                       ^~~~~~~~~
+exercises.c:110:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  110 |       int elemento = top(P1);
+      |                      ^~~
+exercises.c:111:12: error: passing argument 1 of ‘push’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  111 |       push(pila_aux, elemento);
+      |            ^~~~~~~~
+      |            |
+      |            int *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:111:22: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  111 |       push(pila_aux, elemento);
+      |                      ^~~~~~~~
+      |                      |
+      |                      int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:115:16: error: passing argument 1 of ‘top’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  115 |     while (top(pila_aux) != NULL)
+      |                ^~~~~~~~
+      |                |
+      |                int *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:117:26: error: passing argument 1 of ‘top’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  117 |       int elemento = top(pila_aux);
+      |                          ^~~~~~~~
+      |                          |
+      |                          int *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:14:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   14 | void *top(Stack *stack) { return first(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:117:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  117 |       int elemento = top(pila_aux);
+      |                      ^~~
+exercises.c:118:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  118 |       push(P1, elemento);
+      |                ^~~~~~~~
+      |                |
+      |                int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:119:12: error: passing argument 1 of ‘push’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  119 |       push(P2, elemento);
+      |            ^~
+      |            |
+      |            int *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:119:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  119 |       push(P2, elemento);
+      |                ^~~~~~~~
+      |                |
+      |                int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:120:11: error: passing argument 1 of ‘pop’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  120 |       pop(pila_aux);
+      |           ^~~~~~~~
+      |           |
+      |           int *
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:17:18: note: expected ‘Stack *’ {aka ‘List *’} but argument is of type ‘int *’
+   17 | void *pop(Stack *stack) { return popFront(stack); }
+      |           ~~~~~~~^~~~~
+In file included from test.c:5:
+exercises.c:124:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  124 |     return P2;
+      |            ^~
+exercises.c:103:6: note: declared here
+  103 | void copia_pila(Stack* P1, Stack* P2)
+      |      ^~~~~~~~~~
+exercises.c: At top level:
+exercises.c:126:1: error: expected identifier or ‘(’ before ‘}’ token
+  126 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6074ee1
