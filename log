@@ -1556,3 +1556,16 @@ test.c:272: error: expected ‘{’ at end of input
 cc1: all warnings being treated as errors
 Compilation failed
 dbb2df7
+Sat 23 Mar 2024 09:52:08 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:105:3: error: unknown type name ‘Pila’
+  105 |   Pila * funcion (Pila *  P1)
+      |   ^~~~
+exercises.c:105:19: error: unknown type name ‘Pila’
+  105 |   Pila * funcion (Pila *  P1)
+      |                   ^~~~
+Compilation failed
+7a92265
