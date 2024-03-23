@@ -1458,3 +1458,101 @@ exercises.c:126:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 6074ee1
+Sat 23 Mar 2024 09:51:43 PM UTC: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:104:1: error: unknown type name ‘Pila’
+  104 | Pila * funcion (Pila *  P1)
+      | ^~~~
+exercises.c:104:17: error: unknown type name ‘Pila’
+  104 | Pila * funcion (Pila *  P1)
+      |                 ^~~~
+exercises.c:140:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  140 | {
+      | ^
+In file included from test.c:6:
+arraylist.c:6:1: error: empty declaration [-Werror]
+    6 | struct List {
+      | ^~~~~~
+arraylist.c:12:14: error: storage class specified for parameter ‘List’
+   12 | typedef List List;
+      |              ^~~~
+arraylist.c:14:1: error: expected declaration specifiers before ‘List’
+   14 | List* create_list() {
+      | ^~~~
+arraylist.c:21:13: error: expected declaration specifiers or ‘...’ before ‘List’
+   21 | void* first(List *L) {
+      |             ^~~~
+arraylist.c:29:12: error: expected declaration specifiers or ‘...’ before ‘List’
+   29 | void* next(List *L) {
+      |            ^~~~
+arraylist.c:37:16: error: expected declaration specifiers or ‘...’ before ‘List’
+   37 | void pushFront(List *L, void *dato) {
+      |                ^~~~
+arraylist.c:50:15: error: expected declaration specifiers or ‘...’ before ‘List’
+   50 | void pushBack(List *L, void *dato) {
+      |               ^~~~
+arraylist.c:55:18: error: expected declaration specifiers or ‘...’ before ‘List’
+   55 | void pushCurrent(List *L, void *dato) {
+      |                  ^~~~
+arraylist.c:68:16: error: expected declaration specifiers or ‘...’ before ‘List’
+   68 | void* popFront(List *L) {
+      |                ^~~~
+arraylist.c:80:15: error: expected declaration specifiers or ‘...’ before ‘List’
+   80 | void* popBack(List *L) {
+      |               ^~~~
+arraylist.c:89:18: error: expected declaration specifiers or ‘...’ before ‘List’
+   89 | void* popCurrent(List *L) {
+      |                  ^~~~
+arraylist.c:102:14: error: expected declaration specifiers or ‘...’ before ‘List’
+  102 | int get_size(List *L) {
+      |              ^~~~
+test.c:9:35: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+    9 | char * _strdup2(const char * str) {
+      |                                   ^
+test.c:16:1: error: parameter ‘test_id’ is initialized
+   16 | int test_id = -1;
+      | ^~~
+test.c:19:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   19 | int success(){
+      |              ^
+test.c:24:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   24 | void err_msg(char* msg){
+      |                        ^
+test.c:31:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   31 | void ok_msg(char* msg){
+      |                       ^
+test.c:37:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   37 | void info_msg(char* msg){
+      |                         ^
+test.c:42:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   42 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:60:22: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   60 | int test_crea_lista(){
+      |                      ^
+test.c:84:22: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   84 | int test_suma_lista(){
+      |                      ^
+test.c:112:28: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  112 | int test_elimina_elemento(){
+      |                            ^
+test.c:158:22: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  158 | int test_copia_pila(){
+      |                      ^
+test.c:214:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  214 | int test_parentesis_balanceados(){
+      |                                  ^
+test.c:253:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  253 | int main( int argc, char *argv[] ) {
+      |                                    ^
+In file included from test.c:5:
+exercises.c:103:6: error: old-style parameter declarations in prototyped function definition
+  103 | void copia_pila(Stack* P1, Stack* P2)
+      |      ^~~~~~~~~~
+test.c:272: error: expected ‘{’ at end of input
+cc1: all warnings being treated as errors
+Compilation failed
+dbb2df7
