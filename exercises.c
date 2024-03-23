@@ -58,8 +58,16 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
-   return 0;
+int sumaLista(List *L) 
+{
+  int suma = 0; 
+  int *dato = (int *)first(L);
+  while (dato != NULL)
+    {
+      suma += *dato;
+      dato = (int * )next(L);
+    }
+   return suma;
 }
 
 /*
@@ -71,8 +79,18 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
-
+void eliminaElementos(List*L, int elem)
+{
+  int *dato = (int *)first(L);
+  while(dato != NULL)
+    {
+      if(*dato == elem)
+      {
+        popCurrent(L);
+      
+      }
+      dato = next(L);
+    }
 }
 
 /*
