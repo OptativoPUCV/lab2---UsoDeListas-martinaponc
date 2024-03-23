@@ -123,7 +123,7 @@ char *elemento;
       }
       else
       {
-        elemento = (char*) top(pila);
+        elemento = (char*) malloc(pila);
 
         if(*elemento == '{' && cadena[i] == '}' || 
           *elemento == '(' && cadena[i] == ')' ||

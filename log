@@ -408,3 +408,30 @@ exercises.c:130:28: error: suggest parentheses around ‘&&’ within ‘||’ [
 cc1: all warnings being treated as errors
 Compilation failed
 d9e88df
+Sat 23 Mar 2024 09:06:05 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:126:35: error: passing argument 1 of ‘malloc’ makes integer from pointer without a cast [-Werror=int-conversion]
+  126 |         elemento = (char*) malloc(pila);
+      |                                   ^~~~
+      |                                   |
+      |                                   Stack * {aka List *}
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:540:29: note: expected ‘size_t’ {aka ‘long unsigned int’} but argument is of type ‘Stack *’ {aka ‘List *’}
+  540 | extern void *malloc (size_t __size) __THROW __attribute_malloc__
+      |                      ~~~~~~~^~~~~~
+In file included from test.c:5:
+exercises.c:128:29: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  128 |         if(*elemento == '{' && cadena[i] == '}' ||
+      |            ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:130:28: error: suggest parentheses around ‘&&’ within ‘||’ [-Werror=parentheses]
+  130 |           *elemento == '[' && cadena[i] == ']')
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:128:12: error: ‘*elemento’ may be used uninitialized [-Werror=maybe-uninitialized]
+  128 |         if(*elemento == '{' && cadena[i] == '}' ||
+      |            ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+243d07e
