@@ -105,8 +105,8 @@ void copia_pila(Stack* P1, Stack* P2)
   Stack* funcion(Stack* P1)
   {
 
-    pila * P2 = crea_pila();
-    pila * pila_aux = crea_pila();
+    Stack * P2 = crea_pila();
+    Stack * pila_aux = crea_pila();
 
     while (top(P1) != NULL)
     {

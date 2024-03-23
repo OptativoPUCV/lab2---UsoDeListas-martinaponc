@@ -745,3 +745,62 @@ exercises.c:105:10: error: ‘funcion’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 e4dad26
+Sat 23 Mar 2024 09:45:59 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘funcion’:
+exercises.c:108:18: error: implicit declaration of function ‘crea_pila’; did you mean ‘copia_pila’? [-Werror=implicit-function-declaration]
+  108 |     Stack * P2 = crea_pila();
+      |                  ^~~~~~~~~
+      |                  copia_pila
+exercises.c:108:18: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:109:24: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  109 |     Stack * pila_aux = crea_pila();
+      |                        ^~~~~~~~~
+exercises.c:113:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  113 |       int elemento = top(P1);
+      |                      ^~~
+exercises.c:114:22: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  114 |       push(pila_aux, elemento);
+      |                      ^~~~~~~~
+      |                      |
+      |                      int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:120:22: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  120 |       int elemento = top(pila_aux);
+      |                      ^~~
+exercises.c:121:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  121 |       push(P1, elemento);
+      |                ^~~~~~~~
+      |                |
+      |                int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:122:16: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  122 |       push(P2, elemento);
+      |                ^~~~~~~~
+      |                |
+      |                int
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘int’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+At top level:
+exercises.c:105:10: error: ‘funcion’ defined but not used [-Werror=unused-function]
+  105 |   Stack* funcion(Stack* P1)
+      |          ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3fc8712
