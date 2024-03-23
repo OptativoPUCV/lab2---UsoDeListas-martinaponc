@@ -133,7 +133,7 @@ Stack *pila = create_stack();
         }
         else
         {
-          return 1;
+          return 0;
         }
       }
   }
