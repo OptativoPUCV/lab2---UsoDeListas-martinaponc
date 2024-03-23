@@ -138,7 +138,7 @@ char *elemento;
       }
   }
 
-  if(top(pila) == NULL)
+  if(top(pila) != NULL)
   {
     return 0;
   }
