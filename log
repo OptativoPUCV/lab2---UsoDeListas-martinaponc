@@ -583,3 +583,16 @@ exercises.c:103:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 b50cbb8
+Sat 23 Mar 2024 09:42:20 PM UTC: 
+ exercises.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:105:3: error: unknown type name ‘pila’
+  105 |   pila* funcion(pila* P1){
+      |   ^~~~
+exercises.c:105:17: error: unknown type name ‘pila’
+  105 |   pila* funcion(pila* P1){
+      |                 ^~~~
+Compilation failed
+6b6e6d3
