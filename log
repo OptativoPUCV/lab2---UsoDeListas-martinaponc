@@ -596,3 +596,16 @@ exercises.c:105:17: error: unknown type name ‘pila’
       |                 ^~~~
 Compilation failed
 6b6e6d3
+Sat 23 Mar 2024 09:44:55 PM UTC: 
+ exercises.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:105:3: error: unknown type name ‘pila’
+  105 |   pila* funcion(pila* P1)
+      |   ^~~~
+exercises.c:105:17: error: unknown type name ‘pila’
+  105 |   pila* funcion(pila* P1)
+      |                 ^~~~
+Compilation failed
+85ccbfa
